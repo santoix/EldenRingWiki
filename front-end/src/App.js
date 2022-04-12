@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import Main from './main'; 
 import Lore from './lore';
+import Hugs from './hugs';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route exact path="/lore">
             <Lore/>
+          </Route>
+          <Route exact path="/hugs">
+            <Hugs/>
           </Route>
         </Switch>
       </div>

@@ -1,0 +1,25 @@
+.hugs{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.chat {
+    text-align: center;
+    background-color: #4d3200;
+    max-width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+.awnser {
+  font-family: "Quicksand";
+  color: black;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
