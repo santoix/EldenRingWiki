@@ -22,7 +22,6 @@ const Hugs = () => {
                 <div className="box"></div>
                 <div className="box"></div>
             </div> */}
-            
             <div className="hugs">
                 {img}
                 <div className="chat">
