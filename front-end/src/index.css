@@ -13,10 +13,10 @@
   /* max-width: 600px; */
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
-  background-color: #6a6a48;
+  background-color: #4d3300;
 }
 .navbar h1 {
-  color: #999900;
+  color: #e6ac00;
 }
 .navbar .links {
   margin-left: auto;
@@ -25,6 +25,9 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  background-color: #e6ac00;
+  border-radius: 8px;
+  color: #f2f2f2;
 }
 .navbar a:hover {
   color: #999900;
@@ -34,3 +37,4 @@
   margin: 40px auto;
   padding: 20px;
 }
+
