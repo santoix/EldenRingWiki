@@ -13,15 +13,24 @@ const Hugs = () => {
 
     }
 
-    return (  
-        <div className="hugs">
-           {img}
-            <div className="chat">
-                <button className="awnser" onClick={handleclick}>Let her hold you</button>
-                <button className="awnser">Refuse</button>
+    return (
+        <>
+            {/* <div className="container">
+                <div className="box"></div>
+                <div className="box"></div>
+                <div className="box"></div>
+                <div className="box"></div>
+                <div className="box"></div>
+            </div> */}
+            
+            <div className="hugs">
+                {img}
+                <div className="chat">
+                    <button className="awnser" onClick={handleclick}>Let her hold you</button>
+                    <button className="awnser">Refuse</button>
+                </div>
             </div>
-        </div>
-
+        </>
     );
 }
  

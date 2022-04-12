@@ -14,6 +14,7 @@
     border-radius: 8px;
     align-items: center;
     margin-top: 10px;
+    border: 6px solid #996600;
   }
 
 .awnser {
@@ -22,4 +23,16 @@
   padding: 20px;
   margin-top: 10px;
   border-radius: 8px;
+ 
+}
+
+.container{
+  display: flex;
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  background-color: tomato;
+  border: 2px solid black;
 }
