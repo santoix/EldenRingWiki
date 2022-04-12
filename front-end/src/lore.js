@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Main = () => {
+const Lore = () => {
 
     // const [name, setName] = useState('teste');
 
@@ -9,9 +9,9 @@ const Main = () => {
     // }
 
     let [post, setPost] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+        { title: 'teste1 new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+        { title: 'teste2 party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+        { title: 'teste3 dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
       ])
     return (
         <div className="home">
@@ -25,4 +25,4 @@ const Main = () => {
       );
 }
  
-export default Main;
+export default Lore;
