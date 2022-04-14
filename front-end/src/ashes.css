@@ -1,0 +1,9 @@
+.ashecontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    flex:1;
+  }
