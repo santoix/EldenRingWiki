@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 
@@ -10,25 +10,42 @@ const Ashes = () => {
     //    setName('Pass');
     // }
 
-    let [post, setPost] = useState([
-        { title: 'ashes new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-        { title: 'teste2 party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-        { title: 'teste3 dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-      ])
-
+   
+      const url = '/getashes';
+      const [ashes, setAshes] = useState([]);
+      
     
+      useEffect (() => {
 
+          axios.get(url).then(response => {
+            //console.log(response);
+            setAshes(response.data.data);
+          })
 
-    return (
-        <div className="home">
-            {post.map(post => (
-                <div className="postpreview" key={post.id}>
-                    <h2>{post.title}</h2>
-                    <p>{post.body}</p>
-                </div>
-            ))}
+      }, [])
+    
+    console.log(ashes);
+    
+    if(ashes.length > 0){
+      return (
+      <>
+        <div>
+              <p>{ashes[0].name}</p>
+              <img src={ashes[0].image}/>
+              <p>{ashes[0].affinity}</p>
+              <p>{ashes[0].description}</p>
+              <p>{ashes[0].skill}</p>
+              
         </div>
+      </>
       );
-}
- 
+    }
+    return (
+      <>
+        <div>
+              <p>oi</p>
+        </div>
+      </>
+    );
+} 
 export default Ashes;

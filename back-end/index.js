@@ -22,6 +22,7 @@ app.get('/clean', (req, res) => {
     request(
         'https://eldenring.fanapis.com/api/ashes',
          function(error, response, body){
+             //console.log(body);
              if (!error && response.statusCode == 200){
                  var parsedBody = JSON.parse(body);
                  var data = parsedBody ["data"];
