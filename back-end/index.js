@@ -25,7 +25,7 @@ app.get('/clean', (req, res) => {
              if (!error && response.statusCode == 200){
                  var parsedBody = JSON.parse(body);
                  var data = parsedBody ["data"];
-                 res.send({data})
+                 res.send({data});
              }
         }
     );
@@ -41,7 +41,7 @@ app.get('/clean', (req, res) => {
                  var affinity = [];
                  for(i = 0 ; i < parsedBody.data.length; i++){
                     affinity[i] = parsedBody.data[i].affinity;
-                    console.log(i);
+                    //console.log(i);
                  }
                 //var affinity = parsedBody.data[0].affinity;
                 res.send({affinity});
