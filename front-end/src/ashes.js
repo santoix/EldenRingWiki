@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./ashes.css";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 const Ashes = () => {
-  // const [name, setName] = useState('teste');
-
-  // const handClick = () => {
-  //    setName('Pass');
-  // }
-
   const url = "/getashes";
   const [ashes, setAshes] = useState([]);
 
@@ -25,26 +22,25 @@ const Ashes = () => {
     return (
       <div className="ashecontainer">
         {ashes?.map((ashe) => (
-          <div className="box1">
-            <p>{ashe.name}</p>
+          <Card className="card1" sx={{ maxWidth: 200 }}>
             {ashe.image === null ? (
               <img src={"https://via.placeholder.com/200"} />
             ) : (
               <img src={ashe.image} />
             )}
-            <p>{ashe.affinity}</p>
-            {console.log(ashe.name)}
-          </div>
+            <CardContent>
+              <Typography gutterBottom variant="p" component="div">
+                {ashe.name}.
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Affinity: {ashe.affinity}
+              </Typography>
+            </CardContent>
+          </Card>
         ))}
       </div>
     );
   }
-  return (
-    <>
-      <div>
-        <p>Loading</p>
-      </div>
-    </>
-  );
 };
+
 export default Ashes;
