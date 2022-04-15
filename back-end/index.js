@@ -1,3 +1,5 @@
+const axios = require("axios").default;
+const { response } = require("express");
 const express = require("express");
 var request = require("request");
 const app = express();
@@ -8,14 +10,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/clean", (req, res) => {
-  request(
-    "https://eldenring.fanapis.com/api/ashes",
-    function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-        res.send(body);
-      }
-    }
-  );
+  axios
+    .get("https://eldenring.fanapis.com/api/ashes")
+    .then(function (response) {
+      //var data = response["data"]["data"];
+      res.json(response.data.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
 
 app.get("/getashes", (req, res) => {
