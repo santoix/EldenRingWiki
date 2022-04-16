@@ -31,7 +31,7 @@ const Ashes = () => {
             )}
             <CardContent>
               <Typography gutterBottom variant="p" component="div">
-                <Link to="/asheinfo" state={ashe.name}>
+                <Link to="/asheinfo" state={ashe}>
                   {ashe.name}.
                 </Link>
               </Typography>
