@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./ashes.css";
 import Card from "@mui/material/Card";
@@ -22,7 +23,7 @@ const Ashes = () => {
     return (
       <div className="ashecontainer">
         {ashes?.map((ashe) => (
-          <Card className="card1" sx={{ maxWidth: 200 }}>
+          <Card className="card1" key={ashe.id} sx={{ maxWidth: 200 }}>
             {ashe.image === null ? (
               <img src={"https://via.placeholder.com/200"} />
             ) : (
@@ -30,7 +31,9 @@ const Ashes = () => {
             )}
             <CardContent>
               <Typography gutterBottom variant="p" component="div">
-                {ashe.name}.
+                <Link to="/asheinfo" state={ashe.name}>
+                  {ashe.name}.
+                </Link>
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Affinity: {ashe.affinity}
