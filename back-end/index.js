@@ -23,7 +23,21 @@ app.get("/clean", (req, res) => {
 
 app.get("/getashes", (req, res) => {
   request(
-    "https://eldenring.fanapis.com/api/ashes",
+    "https://eldenring.fanapis.com/api/ashes?limit=100",
+    function (error, response, body) {
+      //console.log(body);
+      if (!error && response.statusCode == 200) {
+        var parsedBody = JSON.parse(body);
+        var data = parsedBody["data"];
+        res.json(data);
+      }
+    }
+  );
+});
+
+app.get("/getmain", (req, res) => {
+  request(
+    "https://eldenring.fanapis.com/api/classes",
     function (error, response, body) {
       //console.log(body);
       if (!error && response.statusCode == 200) {
@@ -53,6 +67,18 @@ app.get("/getashesaffinity", (req, res) => {
       }
     }
   );
+});
+
+app.get("/weapons", (req, res) => {
+  axios
+    .get("https://eldenring.fanapis.com/api/weapons?limit=100")
+    .then(function (response) {
+      //var data = response["data"]["data"];
+      res.json(response.data.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
 
 // POST method route

@@ -27,7 +27,7 @@ const Ashes = () => {
             {ashe.image === null ? (
               <img src={"https://via.placeholder.com/200"} />
             ) : (
-              <img src={ashe.image} />
+              <img src={ashe.image} height="200px" width="200px" />
             )}
             <CardContent>
               <Typography gutterBottom variant="p" component="div">
