@@ -4,6 +4,7 @@ import Hugs from "./hugs";
 import Ashes from "./ashes";
 import Asheinfo from "./asheinfo";
 import Weapons from "./weapons";
+import Weaponinfo from "./weaponinfo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/weapons" element={<Weapons />} />
             <Route path="/hugs" element={<Hugs />} />
             <Route path="/asheinfo" element={<Asheinfo />} />
+            <Route path="/weaponinfo" element={<Weaponinfo />} />
           </Routes>
         </div>
       </div>

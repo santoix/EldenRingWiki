@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 import Grid from "@mui/material/Grid";
-import "./info.css";
+import "./displaydata.css";
 
-const Asheinfo = () => {
+const Weaponinfo = () => {
   const location = useLocation();
   const data = location.state;
   console.log(data);
@@ -30,8 +30,8 @@ const Asheinfo = () => {
         </Grid>
         <Grid item xs={8}>
           <div className="griditem4">
-            <p>{data.affinity}</p>
-            <p>{data.skill}</p>
+            <p>werwer</p>
+            <p>werwer</p>
           </div>
         </Grid>
       </Grid>
@@ -39,4 +39,4 @@ const Asheinfo = () => {
   );
 };
 
-export default Asheinfo;
+export default Weaponinfo;

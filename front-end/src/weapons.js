@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./weapons.css";
+import "./displaydata.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 const Weapons = () => {
   const url = "/weapons";
@@ -28,10 +29,12 @@ const Weapons = () => {
             )}
             <CardContent>
               <Typography gutterBottom variant="p" component="div">
-                {weapon.name}.
+                <Link to="/weaponinfo" state={weapon}>
+                  {weapon.name}.
+                </Link>
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Name: {weapon.name}.
+                Category: {weapon.category}.
               </Typography>
             </CardContent>
           </Card>

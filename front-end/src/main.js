@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./main.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import "./displaydata.css";
 
 const Main = () => {
   const url = "/getmain";
@@ -24,7 +24,7 @@ const Main = () => {
         </div>
         <div className="maincontainer">
           {main?.map((main1) => (
-            <Card className="maincard" sx={{ maxWidth: 500 }}>
+            <Card className="maincard " sx={{ maxWidth: 500 }}>
               {main1.image === null ? (
                 <img src={"https://via.placeholder.com/200"} />
               ) : (

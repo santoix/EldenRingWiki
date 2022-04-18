@@ -37,7 +37,7 @@ app.get("/getashes", (req, res) => {
 
 app.get("/getmain", (req, res) => {
   request(
-    "https://eldenring.fanapis.com/api/classes",
+    "https://eldenring.fanapis.com/api/classes?limit=10",
     function (error, response, body) {
       //console.log(body);
       if (!error && response.statusCode == 200) {
