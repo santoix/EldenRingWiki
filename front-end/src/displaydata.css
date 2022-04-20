@@ -48,5 +48,12 @@
 .card1 {
    margin-top: 20px;
    margin-bottom: 20px;
- 
 }
+
+.weaponsshields{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+

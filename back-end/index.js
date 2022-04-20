@@ -81,6 +81,18 @@ app.get("/weapons", (req, res) => {
     });
 });
 
+app.get("/shields", (req, res) => {
+  axios
+    .get("https://eldenring.fanapis.com/api/shields?limit=100")
+    .then(function (response) {
+      //var data = response["data"]["data"];
+      res.json(response.data.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
 // POST method route
 app.post("/", (req, res) => {
   res.send("POST request to the homepage");
