@@ -11,16 +11,16 @@ import { Link } from "react-router-dom";
 const Weapons = () => {
   // const url1 = "/weapons";
   // const url2 = "/shields";
-  const [url, setUrl] = useState(["/weapons"]);
+  const [url, setUrl] = useState("/shields");
   const [weapons, setWeapons] = useState([]);
-  const [checker, setChecker] = useState([true]);
+  const [checker, setChecker] = useState(true);
 
   function handleChange() {
     if (checker == true) {
-      setUrl("/shields");
+      setUrl("/weapons");
       setChecker(false);
     } else {
-      setUrl("/weapons");
+      setUrl("/shields");
       setChecker(true);
     }
   }
@@ -42,7 +42,11 @@ const Weapons = () => {
       <>
         <div className="weaponsshields">
           <p className="weaponsshields1">Weapons</p>
-          <Switch className="weaponsshields1" onChange={() => handleChange()} />
+          <Switch
+            className="weaponsshields1"
+            onChange={() => handleChange()}
+            checked={checker}
+          />
           <p className="weaponsshields1">Shields</p>
         </div>
         <div className="weaponscontainer">
