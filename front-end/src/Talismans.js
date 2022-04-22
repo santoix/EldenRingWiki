@@ -19,7 +19,7 @@ const Talismans = () => {
 
   if (talismans.length > 0) {
     return (
-      <div className="ashecontainer">
+      <div className="anycontainer">
         {talismans?.map((talisman) => (
           <Card className="card1" key={talisman.id} sx={{ maxWidth: 200 }}>
             {talisman.image === null ? (

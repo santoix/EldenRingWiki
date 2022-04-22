@@ -21,7 +21,7 @@ const Ashes = () => {
 
   if (ashes.length > 0) {
     return (
-      <div className="ashecontainer">
+      <div className="anycontainer">
         {ashes?.map((ashe) => (
           <Card className="card1" key={ashe.id} sx={{ maxWidth: 200 }}>
             {ashe.image === null ? (
