@@ -21,14 +21,20 @@
 .navbar .links {
   margin-left: auto;
 }
-.navbar a {
+
+
+.navbutton{
+  color: #f2f2f2 !important;
+  background-color: #e6ac00 !important;
+}
+.navbuttonmenu{
   margin-left: 16px;
   text-decoration: none;
-  padding: 6px;
   background-color: #e6ac00;
   border-radius: 8px;
-  color: #f2f2f2;
+  color: white;
 }
+
 .navbar a:hover {
   color: #999900;
 }

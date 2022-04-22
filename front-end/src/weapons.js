@@ -54,7 +54,7 @@ const Weapons = () => {
             <Card
               className="weaponscard"
               sx={{ maxWidth: 200 }}
-              key={WebGLShaderPrecisionFormat.id}
+              key={weapon.id}
             >
               {weapon.image === null ? (
                 <img src={"https://via.placeholder.com/200"} />
