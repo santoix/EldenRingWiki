@@ -5,6 +5,8 @@ import Ashes from "./ashes";
 import Asheinfo from "./asheinfo";
 import Weapons from "./weapons";
 import Weaponinfo from "./weaponinfo";
+import Talismans from "./Talismans";
+import Talismaninfo from "./Talismaninfo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
             <Route path="/hugs" element={<Hugs />} />
             <Route path="/asheinfo" element={<Asheinfo />} />
             <Route path="/weaponinfo" element={<Weaponinfo />} />
+            <Route path="/Talisman" element={<Talismans />} />
+            <Route path="/talismaninfo" element={<Talismaninfo />} />
           </Routes>
         </div>
       </div>
