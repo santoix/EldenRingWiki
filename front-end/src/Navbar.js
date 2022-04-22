@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Button className="navbutton" omponent={Link} to="/" variant="contained">
+      <Button className="navbutton" component={Link} to="/" variant="contained">
         Home
       </Button>
       <MenuButton
