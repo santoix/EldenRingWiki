@@ -14,6 +14,7 @@ const Navbar = () => {
         items={[
           { name: "weapons", link: "/weapons" },
           { name: "Ashes", link: "/Ashes" },
+          { name: "Taslisman", link: "/Talisman" },
         ]}
       />
       <MenuButton name={"lore"} items={[{ name: "hugs", link: "/hugs" }]} />
